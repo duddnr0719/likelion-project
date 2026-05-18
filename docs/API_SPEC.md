@@ -30,6 +30,11 @@
 | `region` | string | 선택 | 지역 필터 | `?region=해외` |
 | `sort` | string | 선택 | 정렬 기준 | `?sort=price_asc` |
 
+모든 Query Parameter는 조합하여 사용할 수 있습니다.
+
+**예시:** 
+GET /api/travels/?category=자연&region=국내&sort=rating_desc
+
 #### sort 옵션
 
 | 값 | 설명 |
@@ -74,6 +79,8 @@ GET /api/travels/?category=도시&sort=rating_desc
 }
 ```
 
+모든 응답은 count, filters, results 구조를 동일하게 유지합니다.
+
 #### 응답 필드 설명
 
 | 필드 | 타입 | 설명 |
@@ -98,6 +105,7 @@ GET /api/travels/?category=도시&sort=rating_desc
 ### `GET /travels/meta/`
 
 프론트엔드 필터 UI 구성에 필요한 옵션 데이터를 반환합니다.
+프론트엔드가 하드코딩 없이 필터 옵션을 동적으로 렌더링할 수 있도록 메타 데이터를 제공합니다.
 
 #### 응답 예시 (200 OK)
 

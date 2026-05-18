@@ -109,6 +109,8 @@ npm run dev
 
 자세한 내용 → [API 명세서](./docs/API_SPEC.md)
 
+- `/api/travels/meta/` API를 통해 프론트엔드 필터 옵션을 동적으로 구성
+
 ---
 
 ## 🌐 배포 가이드
